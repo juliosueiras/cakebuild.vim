@@ -9,8 +9,9 @@ Currently this plugin only provide basic syntax for cakebuild file
 ## Current TODO:
 - [ ] Complete Syntax of Cake
 - [ ] Integrate C# syntax
-- [ ] Implement basic compiler profile for cake
+- [x] Implement basic compiler profile for cake(still need to make the errorformat for cake)
 
 ## Optional TODO:
+- [x] Implement basic snippets for cake
 - [ ] Create a Cake profile for TagBar
 - [ ] Integrate OmniSharp(to provide omnicomplete
