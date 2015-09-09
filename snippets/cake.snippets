@@ -1,0 +1,28 @@
+snippet t
+	Task("$1")
+	    .Does(() =>
+	{
+	    $2
+	});
+
+snippet dt
+	Task("$1")
+	    .IsDependentOn("$2")
+	    .Does(() =>
+	{
+	    $3
+	});
+
+snippet ndt
+	Task("$1")
+	    .Does(() =>
+	{
+	    $3
+	});
+
+	Task("$2")
+	    .IsDependentOn("$1")
+	    .Does(() =>
+	{
+	    $4
+	});
