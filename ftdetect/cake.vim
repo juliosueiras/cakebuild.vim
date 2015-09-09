@@ -8,6 +8,7 @@ autocmd BufNewFile,BufRead *.cake set filetype=cake
 function! s:DetectCakeBuild()
     if getline(1) =~ '^#!.*\<cake\>'
         set filetype=cake
+        set compiler cakebuild
     endif
 endfunction
 
