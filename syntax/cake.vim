@@ -11,7 +11,10 @@ let s:cake_cpo_save = &cpo
 set cpo&vim
 
 syn keyword cakeFunction MSBuild XBuild IsRunningOnWindows  Argument SetConfiguration Directory NuGetRestore CleanDirectory + =
-syn keyword cakeKeyword  Task RunTarget Does IsDependentOn var
+
+syn keyword cakeKeyword  Task WithCriteria Does IsDependentOn OnError ContinueOnError ReportError Finally Setup Teardown TaskSetup TaskTeardown RunTarget
+
+syn keyword cakeBuiltIn bool byte sbyte char decimal double float int uint long ulong object short ushort string void class struct enum interface
 
 syn match cakeAddin "#addin"
 
@@ -23,6 +26,7 @@ syn region cakeComment start=/\v\// end=/$/
 
 hi def link cakeKeyword Keyword
 hi def link cakeAddin Keyword
+hi def link cakeBuiltIn Keyword
 hi def link cakeRepeat Repeat
 hi def link cakeConditional Conditional
 hi def link cakeFunction Function

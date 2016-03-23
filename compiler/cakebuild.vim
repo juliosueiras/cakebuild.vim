@@ -4,12 +4,13 @@
 " Last Change:  09 Sep 2015
 " Version:      0.0.1
 
-if exists("current_compiler")
+if exists('current_compiler')
   finish
 endif
-let current_compiler = "cakebuild"
 
-if exists(":CompilerSet") != 2      " older Vim always used :setlocal
+let current_compiler = 'cakebuild'
+
+if exists(':CompilerSet') != 2      " older Vim always used :setlocal
   command -nargs=* CompilerSet setlocal <args>
 endif
 

@@ -6,12 +6,33 @@ Vim Syntax for Cake(https://github.com/cake-build/cake)
 
 Currently this plugin only provide basic syntax for cakebuild file
 
+## Tagbar Support
+Add This to your .ctags in your home directory
+
+```
+--langdef=cakebuild
+--langmap=cakebuild:.cake
+--regex-cakebuild=/^.*Task[ \t]*\(\"(.*)\"\)/\1/t,Task/
+```
+
+... and add this to your .vimrc
+```vim
+```vim
+let g:tagbar_type_cake = {
+    \ 'ctagstype' : 'cakebuild',
+    \ 'kinds' : [
+        \ 't:Task'
+    \ ]
+\ }
+``````
+
 ## Current TODO:
 - [ ] Complete Syntax of Cake
 - [ ] Integrate C# syntax
 - [x] Implement basic compiler profile for cake(still need to make the errorformat for cake)
 
+
 ## Optional TODO:
 - [x] Implement basic snippets for cake
-- [ ] Create a Cake profile for TagBar
+- [X] Create a Cake profile for TagBar
 - [ ] Integrate OmniSharp(to provide omnicomplete
