@@ -3,7 +3,7 @@
 " Maintainer:       Julio Tain Sueiras(juliosueiras@gmail.com)
 " Filenames:        *.cake
 
-if exists("b:current_syntax")
+if exists('b:current_syntax')
     finish
 endif
 
@@ -33,7 +33,7 @@ hi def link cakeFunction Function
 hi def link cakeString String
 hi def link cakeComment Comment
 
-let b:current_syntax = "cake"
+let b:current_syntax = 'cake'
 
 let &cpo = s:cake_cpo_save
 unlet s:cake_cpo_save

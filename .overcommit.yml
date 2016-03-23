@@ -1,0 +1,10 @@
+PreCommit:
+  Vint:
+    enabled: true
+    description: 'Analyze with Vint'
+    on_warn: fail
+    required_executable: 'vint'
+    install_command: 'pip install vim-vint'
+    include:
+      - '**/*.vim'
+      - '**/*.vimrc'
